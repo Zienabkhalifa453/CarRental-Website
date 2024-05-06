@@ -14,7 +14,7 @@ export class AuthService {
 
   setLogin(loginData:object):Observable<any>{
 
-return this._httpclient.post(`${environment.baseURL}//api/account/login`,loginData);
+return this._httpclient.post(`${environment.baseURL}/api/account/login`,loginData);
 
   }
 }
