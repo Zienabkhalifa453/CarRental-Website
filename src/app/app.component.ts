@@ -8,11 +8,13 @@ import { ContactComponent } from './components/contact/contact.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { PaymentComponent } from './components/payment/payment.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule,RouterOutlet,HeaderComponent,FooterComponent,RouterOutlet,CarsComponent,ContactComponent,RegisterComponent,LoginComponent,NotFoundComponent],
+  imports: [CommonModule,RouterOutlet,HeaderComponent,FooterComponent,RouterOutlet,CarsComponent,ContactComponent,RegisterComponent,LoginComponent,PaymentComponent,NotFoundComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
