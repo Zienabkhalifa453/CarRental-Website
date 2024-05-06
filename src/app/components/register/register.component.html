@@ -1,28 +1,33 @@
-<form [formGroup]="registerform" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <input type="text" class="form-control" formControlName="userName" placeholder="Username">
-    </div>
-    <div class="form-group">
-        <input type="email" class="form-control" formControlName="email" placeholder="Email">
-    </div>
-    <div class="form-group">
-        <input type="password" class="form-control" formControlName="password" placeholder="Password">
-    </div>
-    <div class="form-group">
-        <input type="text" class="form-control" formControlName="name" placeholder="Name">
-    </div>
-    <div class="form-group">
-        <input type="text" class="form-control" formControlName="phoneNumber" placeholder="Phone Number">
-    </div>
-    <div class="form-group">
-        <input type="text" class="form-control" formControlName="address" placeholder="Address">
-    </div>
-    <div class="form-group">
-        <select class="form-control" formControlName="role">
-            <option value="">Select Role</option>
-            <option value="admin">Admin</option>
-            <option value="user">User</option>
-        </select>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+
+
+<div id="form-ui" class="d-flex justify-content-center align-items-center" style="height: 100vh; background-color: black;">
+    <form action="#" method="post" id="form">
+        <div id="form-body">
+            <div id="welcome-lines" class="text-center">
+                <p id="welcome-line-1">Create Account</p>
+            </div>
+            <div id="input-area">
+                
+                <div class="form-inp">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-inp">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-inp">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="form-inp">
+                    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                </div>
+                <p class="sign-up-label">
+                    Already have an account ? <a  [routerLink]="['/Login']" class="sign-up-link">Log in</a>
+                </p>
+            </div>
+            <div id="send" class="text-center">
+                <button id="send-button" type="submit">Create Account</button>
+            </div>
+            
+        </div>
+    </form>
+</div>
