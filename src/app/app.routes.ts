@@ -5,8 +5,10 @@ import { CarsComponent } from './components/cars/cars.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { PaymentComponent } from './components/payment/payment.component';
+import { PaymentComponent } from './components/payments/payment/payment.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { SuccessPaymentComponent } from './components/payments/success-payment/success-payment.component';
+import { FailedPaymentComponent } from './components/payments/failed-payment/failed-payment.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'Home', pathMatch: 'full' },
@@ -17,5 +19,7 @@ export const routes: Routes = [
     { path: 'Login', component: LoginComponent },
     { path: 'Register', component: RegisterComponent },
     { path: 'Payment', component: PaymentComponent },
+    { path: 'Success/:date/:method/:amount', component: SuccessPaymentComponent }, // Adjusted route with parameters
+    { path: 'Failed', component: FailedPaymentComponent },
     { path: '**', component: NotFoundComponent }
 ];
