@@ -1,1 +1,55 @@
-<p>details works!</p>
+<div class="container d-flex justify-content-center">
+    <div class="col-md-5 mtop mb-5">
+      <h2 class="text-center">Car Details</h2>
+      <div class="card mt-5">
+        <div *ngIf="car" class="row">
+          <div class="col-12">
+           <!-- <img src="../../../assets/images/bmw.png" alt="image" class="card-img-top w-100"> for test -->
+            <img [src]="car.image" class="card-img-top" alt="Car Image">
+
+          </div>
+  
+          <div class="col-12 mt-3 ms-2">
+            <p><strong>Model:</strong> {{ car.model }}</p>
+            <p><strong>Make:</strong> {{ car.make }}</p>
+            <p><strong>Year:</strong> {{ car.year }}</p>
+            <p><strong>Fuel Type:</strong> {{ car.fuelType }}</p>
+            <p><strong>Is Available : </strong>
+              <span *ngIf="car.isAvailable" class="text-success"><i class="fas fa-check-circle"></i></span>
+              <span *ngIf="!car.isAvailable" class="text-danger"><i class="fas fa-times-circle"></i></span>
+            </p>
+          </div>
+  
+          <div class="col-12 mt-3">
+            <div class="d-flex justify-content-center mb-5">
+              <button class="btn btn-success">Rent</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .mtop {
+      margin-top: 100px;
+    }
+  
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .card img {
+      border-radius: 15px 15px 0 0;
+    }
+  
+    .card p {
+      margin-bottom: 5px;
+    }
+  
+    .card button {
+      border-radius: 10px;
+    }
+  </style>
+  
