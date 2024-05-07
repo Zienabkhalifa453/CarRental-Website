@@ -10,12 +10,11 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { PaymentComponent } from './components/payments/payment/payment.component';
 import { SuccessPaymentComponent } from './components/payments/success-payment/success-payment.component';
-import { FailedPaymentComponent } from './components/payments/failed-payment/failed-payment.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule,RouterOutlet,HeaderComponent,FooterComponent,RouterOutlet,CarsComponent,ContactComponent,RegisterComponent,LoginComponent,PaymentComponent,NotFoundComponent,SuccessPaymentComponent,FailedPaymentComponent],
+  imports: [CommonModule,RouterOutlet,HeaderComponent,FooterComponent,RouterOutlet,CarsComponent,ContactComponent,RegisterComponent,LoginComponent,PaymentComponent,NotFoundComponent,SuccessPaymentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -8,7 +8,6 @@ import { RegisterComponent } from './components/register/register.component';
 import { PaymentComponent } from './components/payments/payment/payment.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SuccessPaymentComponent } from './components/payments/success-payment/success-payment.component';
-import { FailedPaymentComponent } from './components/payments/failed-payment/failed-payment.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'Home', pathMatch: 'full' },
@@ -20,6 +19,6 @@ export const routes: Routes = [
     { path: 'Register', component: RegisterComponent },
     { path: 'Payment', component: PaymentComponent },
     { path: 'Success/:date/:method/:amount', component: SuccessPaymentComponent }, // Adjusted route with parameters
-    { path: 'Failed', component: FailedPaymentComponent },
+
     { path: '**', component: NotFoundComponent }
 ];
