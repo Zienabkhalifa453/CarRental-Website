@@ -16,6 +16,6 @@ export const routes: Routes = [
     { path: 'Contact', component: ContactComponent },
     { path: 'Login', component: LoginComponent },
     { path: 'Register', component: RegisterComponent },
-    { path: 'Payment', component: PaymentComponent },
+    { path: 'payment', component: PaymentComponent },
     { path: '**', component: NotFoundComponent }
 ];
