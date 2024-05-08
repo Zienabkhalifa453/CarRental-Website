@@ -18,6 +18,6 @@ export const routes: Routes = [
     { path: 'Login', component: LoginComponent },
     { path: 'Register', component: RegisterComponent },
     { path: 'payment', component: PaymentComponent },
-    { path: 'Success/:date/:method/:amount', component: SuccessPaymentComponent }, // Adjusted route with parameters
+    { path: 'Success/:date/:method/:amount', component: SuccessPaymentComponent }, 
     { path: '**', component: NotFoundComponent }
 ];
