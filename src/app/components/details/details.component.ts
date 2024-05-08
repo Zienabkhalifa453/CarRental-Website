@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CarApiService } from '../../Services/car-api.service';
+import { MaintenanceService } from '../../Services/maintenance.service';
 
 @Component({
   selector: 'app-details',
@@ -15,10 +16,13 @@ import { CarApiService } from '../../Services/car-api.service';
 
 export class DetailsComponent implements OnInit {
   car: any;
+  maintenance:any
 
   constructor(
     private route: ActivatedRoute,
-    private carService: CarApiService
+    private carService: CarApiService,
+    private maintanservice:MaintenanceService
+    
   ) { }
 
   ngOnInit(): void {
@@ -28,6 +32,12 @@ export class DetailsComponent implements OnInit {
         this.car = res.message;
         console.log(this.car)
       });
+      this.maintanservice.getById(id).subscribe(res => {
+        this.maintenance = res.message;
+        console.log(this.maintenance)
+      });
+
     });
+    
   }
 }
