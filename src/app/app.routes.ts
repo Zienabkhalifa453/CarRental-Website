@@ -9,10 +9,11 @@ import { PaymentComponent } from './components/payments/payment/payment.componen
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SuccessPaymentComponent } from './components/payments/success-payment/success-payment.component';
 import { DetailsComponent } from './components/details/details.component';
+import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'Home', pathMatch: 'full' },
-    { path: 'Home', component: HomeComponent },
+    { path: 'Home', component: HomeComponent,canActivate:[authGuard] },
     { path: 'About', component: AboutComponent },
     { path: 'Cars', component: CarsComponent },
     { path: 'Contact', component: ContactComponent },
