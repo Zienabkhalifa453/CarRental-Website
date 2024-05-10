@@ -30,11 +30,9 @@ export class DetailsComponent implements OnInit {
       const id = +params['id']; 
       this.carService.getCarById(id).subscribe(res => {
         this.car = res.message;
-        console.log(this.car)
       });
       this.maintanservice.getById(id).subscribe(res => {
         this.maintenance = res.message;
-        console.log(this.maintenance)
       });
 
     });
