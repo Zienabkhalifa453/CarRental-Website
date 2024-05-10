@@ -36,10 +36,14 @@ return this._httpclient.post(`${environment.baseURL}/api/account/login`,loginDat
   {
     localStorage.removeItem("token");
     this._Router.navigate(['/Login']);
+    console.log("loged out");
 
   }
 
-
+resetPassword(passwordData:object):Observable<any>
+{
+return this._httpclient.post(`${environment.baseURL}/api/account/reset-password`,passwordData);
+}
 
 
 
