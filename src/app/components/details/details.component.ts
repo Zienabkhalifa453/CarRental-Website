@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CarApiService } from '../../Services/car-api.service';
 import { MaintenanceService } from '../../Services/maintenance.service';
+import { CommentsComponent } from '../comments/comments.component';
 
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [CommonModule,FormsModule,RouterLink],
+  imports: [CommonModule,FormsModule,RouterLink,CommentsComponent],
   templateUrl: './details.component.html',
   styleUrl: './details.component.css'
 })
