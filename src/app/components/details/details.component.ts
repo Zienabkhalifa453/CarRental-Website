@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CarApiService } from '../../Services/car-api.service';
@@ -8,7 +8,7 @@ import { MaintenanceService } from '../../Services/maintenance.service';
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule,RouterLink],
   templateUrl: './details.component.html',
   styleUrl: './details.component.css'
 })
@@ -30,11 +30,9 @@ export class DetailsComponent implements OnInit {
       const id = +params['id']; 
       this.carService.getCarById(id).subscribe(res => {
         this.car = res.message;
-        console.log(this.car)
       });
       this.maintanservice.getById(id).subscribe(res => {
         this.maintenance = res.message;
-        console.log(this.maintenance)
       });
 
     });

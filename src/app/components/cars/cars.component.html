@@ -6,8 +6,11 @@
           <div class="card__data">
             <span class="card__description">{{ car.model }}</span>
             <p >{{ car.isAvailable ? 'Available' : 'Not Available' }}</p>
+            <p >{{ car.id }}</p>
+
             <br>
-            <a href="#" class="card__button btn btn-dark">Details</a>
+            <a [routerLink]="['/details', car.id]" class="card__button btn btn-dark">Details</a>
+
           </div>
         </article>
       </ng-container>
