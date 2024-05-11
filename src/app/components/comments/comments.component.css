@@ -1,0 +1,13 @@
+.fa-star{
+
+cursor: pointer;
+color: gold;
+font-size: 24px;
+margin: 0 0.2rem;
+
+&.rated{
+    color: red;
+}
+
+transition: color 0.4s ease-in-out;
+}

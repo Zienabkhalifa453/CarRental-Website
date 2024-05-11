@@ -9,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class CommentsComponent {
 
+  rating=0;
+  setRating(value:number)
+  {
+this.rating=value;
+  }
+
 }
