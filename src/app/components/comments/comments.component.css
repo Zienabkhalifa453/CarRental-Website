@@ -1,13 +1,37 @@
-.fa-star{
+#container{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction:row-reverse ;
 
-cursor: pointer;
-color: gray;
-font-size: 24px;
-margin: 0 0.2rem;
+    .fa-star{
 
-&.rated{
-    color: red;
+        cursor: pointer;
+        color: gray;
+        font-size: 24px;
+        margin: 0 0.2rem;
+        
+        &.rated,
+        &:hover,
+        &:hover ~ i
+        {
+            color: red;
+        }
+        
+        transition: color 0.4s ease-in-out;
+
+&.readonly{
+    i{
+        cursor: default;
+        &:hover:not(.rated) ~ i{
+            color: gray;
+        }
+    }
 }
 
-transition: color 0.4s ease-in-out;
+
+    }
+
 }
+
+
+

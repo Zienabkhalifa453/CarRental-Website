@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
 
 @Component({
   selector: 'app-comments',
@@ -10,8 +10,15 @@ import { Component } from '@angular/core';
 export class CommentsComponent {
 
   rating=0;
+@Input()readonly :boolean=false;
+
   setRating(value:number)
   {
+
+    if(this.readonly)
+      {
+        return
+      }
 this.rating=value;
   }
 
