@@ -21,6 +21,7 @@ import { CommonModule } from '@angular/common';
 
 
 export class RegisterComponent {
+  
 
   constructor( private _AuthService:AuthService){}
   registerForm:FormGroup=new FormGroup({
