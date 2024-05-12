@@ -28,8 +28,9 @@ handleform() {
     // Subscribe to the Observable returned by setRegister()
     this._AuthService.setLogin(this.loginForm.value).subscribe({
       next: (response) => {
-     
+     console.log(response);
         if (response.ispass == true) {
+        
       
        localStorage.setItem("token",response.token);
        this._AuthService.saveUserData();
@@ -38,6 +39,7 @@ handleform() {
         
           // Navigate to error if registration is not successful
          // this.errMsg = 'Registration not successful';
+         console.log("error happens");
       
         }
       },
